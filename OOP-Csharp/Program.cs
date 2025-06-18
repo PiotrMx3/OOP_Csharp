@@ -7,6 +7,72 @@
         static void Main(string[] args)
         {
 
+
+            /*
+
+             Methoden
+
+            */
+
+
+            DemonstreerGedrag();
+
+
+            //Console.Write(
+            //    "Welcome in my Car genrator app Lets start !\n"
+            //    + "How many car's you want to create ?: "
+            //    );
+
+            //int amount = Convert.ToInt32(Console.ReadLine());
+
+            //Auto[] autos = new Auto[amount];
+            //Auto.Huidigenorm = MilieuNormen.Euro6;
+
+            //for (int i = 0; i < amount; i++)
+            //{
+            //    Auto nieuwAuto = new Auto();
+
+            //    Console.Write($"Auto - {i + 1} Wat is de kilometer stand ?: ");
+            //    nieuwAuto.KilometerStand = Convert.ToInt32(Console.ReadLine());
+
+            //    Console.Write($"Auto - {i + 1} Wat is de benzinde stand ?: ");
+            //    nieuwAuto.Benzine = Convert.ToInt32(Console.ReadLine());
+
+
+            //    Console.Write($"Auto - {i + 1} Wat is de datum van laatsteonderhoud (JJJ/M/D) ?: ");
+            //    nieuwAuto.LaatsteOnderhoud = DateTime.Parse(Console.ReadLine());
+
+
+            //    autos[i] = nieuwAuto;
+
+            //}
+
+
+            //autos[0].Rijden(50);
+            //autos[0].Rijden(5);
+            //autos[0].Rijden(45);
+
+
+
+            //for (int i = 0; i < autos.Length; i++)
+            //{
+            //    Auto.PrintOnderhoudsrapport(autos[i], i);
+            //}
+
+            //autos[0].Voltanken();
+
+            //autos[0].Onderhouden();
+
+
+
+
+
+
+
+
+
+
+
             /*
 
             ATTRIBUTEN
@@ -34,40 +100,40 @@
 
 
 
-            Console.Write(
-                "Welcome in my Car genrator app Lets start !\n" 
-                + "How many car's you want to create ?: "
-                );
+            //Console.Write(
+            //    "Welcome in my Car genrator app Lets start !\n"
+            //    + "How many car's you want to create ?: "
+            //    );
 
-            int amount = Convert.ToInt32(Console.ReadLine());
+            //int aantalAutos = Convert.ToInt32(Console.ReadLine());
 
-            Auto[] carsArray = new Auto[amount];
-            Auto.Huidigenorm = MilieuNormen.Euro6;
+            //Auto[] autos = new Auto[aantalAutos];
+            //Auto.Huidigenorm = MilieuNormen.Euro6;
 
-            for (int i = 0; i < amount; i++)
-            {
-                Auto newCar = new Auto();
+            //for (int i = 0; i < aantalAutos; i++)
+            //{
+            //    Auto nieuweAuto = new Auto();
 
-                Console.Write($"Auto - {i + 1} Wat is de kilometer stand ?: ");
-                newCar.KilometerStand = Convert.ToInt32(Console.ReadLine());
+            //    Console.Write($"Auto - {i + 1} Wat is de kilometer stand ?: ");
+            //    nieuweAuto.KilometerStand = Convert.ToInt32(Console.ReadLine());
 
-                Console.Write($"Auto - {i + 1} Wat is de benzinde stand ?: ");
-                newCar.Benzine = Convert.ToInt32(Console.ReadLine());
-
-
-                Console.Write($"Auto - {i + 1} Wat is de datum van laatsteonderhoud (JJJ/M/D) ?: ");
-                newCar.LaatsteOnderhoud = DateTime.Parse(Console.ReadLine());
+            //    Console.Write($"Auto - {i + 1} Wat is de benzinde stand ?: ");
+            //    nieuweAuto.Benzine = Convert.ToInt32(Console.ReadLine());
 
 
-                carsArray[i] = newCar;
+            //    Console.Write($"Auto - {i + 1} Wat is de datum van laatsteonderhoud (JJJ/M/D) ?: ");
+            //    nieuweAuto.LaatsteOnderhoud = DateTime.Parse(Console.ReadLine());
 
-            }
+
+            //    autos[i] = nieuweAuto;
+
+            //}
 
 
-            for (int i = 0; i < carsArray.Length; i++)
-            {
-                Auto.PrintOnderhoudsrapport(carsArray[i], i);
-            }
+            //for (int i = 0; i < autos.Length; i++)
+            //{
+            //    Auto.PrintOnderhoudsrapport(autos[i], i);
+            //}
 
 
 
@@ -111,5 +177,28 @@
             //Console.WriteLine(keuze);
 
         }
+
+
+        public static void DemonstreerGedrag()
+        {
+
+            Auto auto1 = new Auto();
+            Auto auto2 = new Auto();
+
+            auto1.Voltanken();
+            auto1.Rijden(10);
+            auto1.Rijden(20);
+
+
+            Auto.PrintOnderhoudsrapport(auto1, 1);
+            Console.WriteLine($"Waarde van wagen is: {auto1.Verkoopsprijs():F2} Euro\n");
+
+            Auto.PrintOnderhoudsrapport(auto2, 2);
+            Console.WriteLine($"Waarde van wagen is: {auto2.Verkoopsprijs():F2} Euro\n");
+
+
+            Auto.VerklaarNorm(MilieuNormen.Euro5);
+        }
+
     }
 }
